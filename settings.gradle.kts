@@ -51,6 +51,8 @@ include(
         "openrndr-utils",
         "openrndr-dds",
         "openrndr-kartifex",
-        "openrndr-ktessellation"
+        "openrndr-ktessellation",
+        "openrndr-android",
+        "openrndr-android-demo"
     )
 )
