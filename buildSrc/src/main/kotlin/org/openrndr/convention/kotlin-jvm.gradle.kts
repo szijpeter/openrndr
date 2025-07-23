@@ -34,7 +34,7 @@ tasks {
 
     withType<KotlinCompile> {
         compilerOptions {
-            jvmTarget.set(JvmTarget.valueOf("JVM_${libs.versions.jvmTarget.get()}"))
+            jvmTarget.set(JvmTarget.JVM_17)
             freeCompilerArgs.add("-Xexpect-actual-classes")
             freeCompilerArgs.add("-Xjdk-release=${libs.versions.jvmTarget.get()}")
             apiVersion.set(KotlinVersion.valueOf("KOTLIN_${libs.versions.kotlinApi.get().replace(".", "_")}"))
@@ -44,5 +44,5 @@ tasks {
 }
 
 java {
-    targetCompatibility = JavaVersion.valueOf("VERSION_${libs.versions.jvmTarget.get()}")
+    targetCompatibility = JavaVersion.VERSION_17
 }

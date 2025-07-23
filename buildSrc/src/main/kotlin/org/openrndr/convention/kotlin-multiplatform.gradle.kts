@@ -30,7 +30,7 @@ tasks.withType<KotlinCompilationTask<*>> {
 }
 tasks.withType<KotlinJvmCompile>().configureEach {
     compilerOptions {
-        jvmTarget.set(JvmTarget.fromTarget(libs.versions.jvmTarget.get()))
+        jvmTarget.set(JvmTarget.JVM_17)
         freeCompilerArgs.add("-Xjdk-release=${libs.versions.jvmTarget.get()}")
     }
 }
